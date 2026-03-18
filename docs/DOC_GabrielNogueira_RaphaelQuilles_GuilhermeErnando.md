@@ -1,1 +1,37 @@
+## UC01 — Realizar Login
+
+### Ator Principal
+Usuário
+
+### Objetivo
+Permitir que o usuário acesse o sistema.
+
+### Pré-condições
+- Usuário deve possuir cadastro ativo.
+
+### Pós-condições
+- Sessão iniciada com sucesso.
+
+### Fluxo Principal
+1. O usuário informa e-mail e senha.
+2. O sistema valida as credenciais.
+3. O sistema autentica o usuário e redireciona para a tela inicial.
+
+### Fluxos Alternativos
+- **A1 — Senha incorreta:**  
+  O sistema exibe mensagem de erro.
+
+- **A2 — Conta bloqueada:**  
+  O sistema impede o login e instrui o usuário a recuperar o acesso.
+
+### RF Relacionados
+- RF01 (Dados Pessoais/Perfil)
+
+### RNF Relacionados
+- RNF02 (Segurança/Criptografia)
+
+### RN Relacionadas
+- RN06 (Acesso restrito por perfil)
+
+  <img width="682" height="420" alt="image" src="https://github.com/user-attachments/assets/9d53fdf4-6205-432b-ba92-c134d3b007b4" />
 
