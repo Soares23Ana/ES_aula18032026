@@ -606,482 +606,122 @@ Os diagramas de atividade a seguir representam os fluxos de execução de cada c
 
 ### DA01 – Cadastrar Aluno (UC01)
 
-@startuml DA01_CadastrarAluno
-start
-:Recepcionista acessa o módulo de matrículas;
-:Sistema exibe o formulário de cadastro;
-:Recepcionista preenche dados pessoais, de contato e endereço do aluno;
-:Recepcionista seleciona o plano contratado;
-:Sistema valida os dados informados;
-if (Dados obrigatórios preenchidos?) then (Não)
-  :Sistema exibe mensagem de erro indicando campos ausentes;
-  stop
-else (Sim)
-  if (Plano selecionado está ativo?) then (Não)
-    :Sistema alerta que o plano não está disponível;
-    stop
-  else (Sim)
-    :Sistema registra o aluno e vincula o cartão RFID;
-    :Sistema exibe confirmação de cadastro realizado com sucesso;
-    stop
-  endif
-endif
-@enduml
+<img width="687" height="349" alt="image" src="https://github.com/user-attachments/assets/962cf7c4-da19-40cd-baa0-24630e4b964a" />
 
 ---
 
 ### DA02 – Gerenciar Planos (UC02)
 
-```plantuml
-@startuml DA02_GerenciarPlanos
-start
-:Gerente acessa o módulo de gerenciamento de planos;
-:Sistema exibe a lista de planos cadastrados e seus status;
-:Gerente seleciona a ação desejada (criar/editar/ativar/desativar);
-:Sistema exibe o formulário correspondente à ação;
-:Gerente preenche ou altera as informações do plano;
-if (Ação = Desativar?) then (Sim)
-  if (Plano possui alunos ativos vinculados?) then (Sim)
-    :Sistema alerta sobre alunos ativos no plano;
-    :Gerente confirma ação para prosseguir;
-  else (Não)
-  endif
-endif
-:Sistema valida e salva as alterações;
-:Sistema exibe confirmação da operação realizada;
-stop
-@enduml
-```
+<img width="392" height="779" alt="image" src="https://github.com/user-attachments/assets/e9f96567-41a8-4977-b1cc-dd6c814f1834" />
 
 ---
 
 ### DA03 – Realizar Login (UC03)
 
-```plantuml
-@startuml DA03_RealizarLogin
-start
-:Usuário acessa a tela de login do sistema;
-:Usuário informa e-mail e senha;
-:Sistema valida as credenciais informadas;
-if (Credenciais válidas?) then (Não)
-  :Sistema exibe mensagem de erro e permite nova tentativa;
-  stop
-else (Sim)
-  if (Conta bloqueada ou inativa?) then (Sim)
-    :Sistema impede o login e orienta contato com a recepção;
-    stop
-  else (Não)
-    :Sistema identifica o perfil do usuário;
-    :Sistema inicia a sessão e redireciona para a tela inicial do perfil;
-    stop
-  endif
-endif
-@enduml
-```
+<img width="687" height="271" alt="image" src="https://github.com/user-attachments/assets/fc125945-5280-401d-a368-43261ff956c4" />
 
 ---
 
 ### DA04 – Editar Cadastro de Aluno (UC04)
 
-```plantuml
-@startuml DA04_EditarCadastroAluno
-start
-:Recepcionista acessa o módulo de matrículas e busca o aluno pelo nome ou CPF;
-if (Aluno encontrado?) then (Não)
-  :Sistema informa que o aluno não foi localizado e retorna à tela de busca;
-  stop
-else (Sim)
-  :Sistema exibe os dados atuais do aluno;
-  :Recepcionista seleciona a opção de edição;
-  :Sistema exibe o formulário preenchido com os dados existentes;
-  :Recepcionista altera os campos desejados;
-  :Sistema valida os dados informados;
-  if (Dados válidos?) then (Não)
-    :Sistema exibe mensagem de erro indicando campos com problema;
-    stop
-  else (Sim)
-    :Sistema salva as alterações e exibe confirmação;
-    stop
-  endif
-endif
-@enduml
-```
+<img width="687" height="314" alt="image" src="https://github.com/user-attachments/assets/d2acc5c9-7f11-4aae-9e96-87b29cb20ecc" />
 
 ---
 
 ### DA05 – Verificar Regularidade do Aluno (UC05)
 
-```plantuml
-@startuml DA05_VerificarRegularidade
-start
-:Recepcionista acessa o módulo de consulta de alunos;
-:Recepcionista busca o aluno pelo nome ou CPF;
-if (Aluno encontrado?) then (Não)
-  :Sistema informa que o aluno não foi localizado e retorna à tela de busca;
-  stop
-else (Sim)
-  :Sistema exibe o status atual do aluno: regular, inadimplente ou inativo;
-  :Sistema exibe o histórico de pagamentos e a data do próximo vencimento;
-  stop
-endif
-@enduml
-```
+<img width="687" height="262" alt="image" src="https://github.com/user-attachments/assets/779eea61-f75c-477b-af47-69e812a5b64f" />
 
 ---
 
 ### DA06 – Registrar Pagamento de Mensalidade (UC06)
 
-```plantuml
-@startuml DA06_RegistrarPagamento
-start
-:Recepcionista busca o aluno pelo nome ou CPF;
-if (Aluno encontrado?) then (Não)
-  :Sistema informa que o aluno não foi localizado e retorna à tela de busca;
-  stop
-else (Sim)
-  :Sistema exibe os dados do aluno e o valor da mensalidade em aberto;
-  :Recepcionista seleciona a forma de pagamento (dinheiro, cartão ou PIX);
-  if (Pagamento é integral?) then (Não)
-    :Sistema bloqueia a operação (RN04);
-    :Sistema exibe mensagem informando que apenas pagamento integral é permitido;
-    stop
-  else (Sim)
-    :Sistema registra o pagamento pelo valor integral;
-    :Sistema atualiza imediatamente a situação do aluno para "regular" (RN07);
-    :Sistema exibe confirmação do pagamento;
-    stop
-  endif
-endif
-@enduml
-```
+<img width="687" height="237" alt="image" src="https://github.com/user-attachments/assets/40d6dad0-5cda-4ce7-8453-def4e54b8a14" />
 
 ---
 
 ### DA07 – Gerar Cobrança Online (UC07)
 
-```plantuml
-@startuml DA07_GerarCobrancaOnline
-start
-:Sistema identifica os alunos com mensalidade em aberto;
-if (Geração da cobrança bem-sucedida?) then (Não)
-  :Sistema registra o erro e agenda nova tentativa de geração;
-  stop
-else (Sim)
-  :Sistema gera o boleto ou link de pagamento para cada aluno elegível;
-  :Sistema envia a cobrança ao aluno pelo canal configurado;
-  :Sistema registra a geração da cobrança no histórico do aluno;
-  if (Pagamento confirmado até a data de vencimento?) then (Não)
-    :Sistema mantém situação do aluno como inadimplente (RN01);
-    stop
-  else (Sim)
-    :Sistema atualiza a situação do aluno para "regular" (RN07);
-    stop
-  endif
-endif
-@enduml
-```
+<img width="687" height="260" alt="image" src="https://github.com/user-attachments/assets/40bfc6a6-f070-4d1d-a5a1-6aefd1b7dce8" />
 
 ---
 
 ### DA08 – Enviar Notificação de Vencimento de Mensalidade (UC08)
 
-```plantuml
-@startuml DA08_NotificarVencimento
-start
-:Sistema verifica diariamente as datas de vencimento das mensalidades;
-:Sistema identifica os alunos com vencimento próximo;
-:Sistema gera a notificação com os dados do valor e da data de vencimento;
-:Sistema envia a notificação ao aluno pelo canal configurado (e-mail ou app);
-if (Envio bem-sucedido?) then (Não)
-  :Sistema registra a falha e realiza nova tentativa no ciclo seguinte;
-else (Sim)
-  :Sistema registra o envio da notificação no histórico do aluno;
-endif
-stop
-@enduml
-```
+<img width="687" height="379" alt="image" src="https://github.com/user-attachments/assets/2c1d32d4-435c-4c92-bb39-7ea18f852eb7" />
 
 ---
 
 ### DA09 – Validar Acesso pela Catraca (UC09)
 
-```plantuml
-@startuml DA09_ValidarAcessoCatraca
-start
-:Aluno aproxima o cartão RFID da catraca;
-:Catraca envia o código RFID ao sistema via API REST;
-:Sistema identifica o aluno pelo código RFID;
-if (Cartão RFID reconhecido?) then (Não)
-  :Sistema retorna erro de identificação;
-  :Acesso negado; catraca permanece bloqueada;
-  stop
-else (Sim)
-  :Sistema verifica se o aluno está com a mensalidade em dia;
-  if (Mensalidade vencida há mais de 5 dias?) then (Sim)
-    :Sistema retorna negação de acesso (RN01);
-    :Catraca permanece bloqueada;
-    stop
-  else (Não)
-    :Sistema retorna autorização de acesso à catraca;
-    :Catraca libera a entrada;
-    :Sistema registra o acesso no histórico do aluno;
-    stop
-  endif
-endif
-@enduml
-```
+<img width="687" height="419" alt="image" src="https://github.com/user-attachments/assets/835fefa8-6374-414b-9c90-911689c4f243" />
 
 ---
 
 ### DA10 – Agendar Aula (UC10)
 
-```plantuml
-@startuml DA10_AgendarAula
-start
-:Aluno acessa o módulo de agendamento;
-:Sistema exibe a lista de aulas disponíveis com horários e vagas;
-:Aluno seleciona a aula desejada;
-:Sistema verifica a disponibilidade de vagas;
-if (Aluno inadimplente?) then (Sim)
-  :Sistema impede o agendamento e orienta o aluno a regularizar a situação;
-  stop
-else (Não)
-  if (Vagas disponíveis?) then (Não)
-    :Sistema informa que a capacidade máxima foi atingida (RN02);
-    stop
-  else (Sim)
-    :Sistema registra a reserva do aluno;
-    :Sistema envia notificação de confirmação ao aluno (UC11);
-    stop
-  endif
-endif
-@enduml
-```
+<img width="687" height="283" alt="image" src="https://github.com/user-attachments/assets/881598d2-ac96-40e4-9dda-5521cbf45e7e" />
 
 ---
 
 ### DA11 – Confirmar Agendamento de Aula (UC11)
 
-```plantuml
-@startuml DA11_ConfirmarAgendamento
-start
-:Sistema recebe o registro de novo agendamento (originado pelo UC10);
-:Sistema verifica o canal de notificação do aluno;
-if (Canal de notificação configurado?) then (Não)
-  :Sistema ignora o envio e registra que o aluno não possui canal ativo;
-  stop
-else (Sim)
-  :Sistema gera a mensagem de confirmação com nome da aula, data e horário;
-  :Sistema envia a notificação ao aluno;
-  if (Envio bem-sucedido?) then (Não)
-    :Sistema registra a falha e realiza nova tentativa de envio;
-  else (Sim)
-    :Sistema registra o envio no histórico de notificações do aluno;
-  endif
-  stop
-endif
-@enduml
-```
+<img width="687" height="272" alt="image" src="https://github.com/user-attachments/assets/21334ab9-92d0-4a02-ad60-893c51079bde" />
 
 ---
 
 ### DA12 – Cancelar Agendamento de Aula (UC12)
 
-```plantuml
-@startuml DA12_CancelarAgendamento
-start
-:Aluno acessa seus agendamentos;
-:Sistema lista as aulas reservadas;
-:Aluno seleciona a aula que deseja cancelar;
-:Sistema verifica se o cancelamento respeita o prazo mínimo de 1 hora;
-if (Cancelamento dentro do prazo?) then (Não)
-  :Sistema informa que o prazo foi encerrado e bloqueia a operação (RN03);
-  stop
-else (Sim)
-  :Sistema cancela a reserva e libera a vaga;
-  :Sistema exibe confirmação do cancelamento;
-  stop
-endif
-@enduml
-```
+<img width="687" height="420" alt="image" src="https://github.com/user-attachments/assets/71ccfca6-b7f2-4dc3-b295-9f387e11252b" />
 
 ---
 
 ### DA13 – Registrar Presença em Aula (UC13)
 
-```plantuml
-@startuml DA13_RegistrarPresenca
-start
-:Instrutor acessa o módulo de aulas do dia;
-:Sistema exibe a lista de aulas e os alunos agendados;
-:Instrutor seleciona a aula correspondente;
-:Sistema exibe a lista de alunos com agendamento confirmado;
-:Instrutor marca a presença de cada aluno;
-if (Aluno presente sem agendamento?) then (Sim)
-  if (Vaga disponível?) then (Sim)
-    :Instrutor inclui manualmente o aluno na lista;
-  else (Não)
-    :Sistema impede a inclusão por falta de vaga;
-  endif
-endif
-:Sistema salva o registro de presença;
-stop
-@enduml
-```
+<img width="599" height="625" alt="image" src="https://github.com/user-attachments/assets/652b5104-3d8e-44aa-838e-3e5fdb1b9e0a" />
 
 ---
 
 ### DA14 – Registrar Avaliação Física (UC14)
 
-```plantuml
-@startuml DA14_RegistrarAvaliacaoFisica
-start
-:Instrutor acessa o módulo de avaliações físicas;
-:Instrutor busca e seleciona o aluno a ser avaliado;
-:Sistema verifica se o aluno está ativo e regular;
-if (Aluno ativo e regular?) then (Não)
-  :Sistema bloqueia o registro (RN05);
-  stop
-else (Sim)
-  :Instrutor preenche os dados da avaliação (peso, IMC, percentual de gordura etc.);
-  :Instrutor pode anexar arquivos complementares, se necessário;
-  :Sistema salva a avaliação e notifica o aluno (UC15);
-  stop
-endif
-@enduml
-```
+<img width="687" height="427" alt="image" src="https://github.com/user-attachments/assets/8241b493-c47e-408d-920f-059ae23ff148" />
+
 
 ---
 
 ### DA15 – Notificar Liberação de Avaliação Física (UC15)
 
-```plantuml
-@startuml DA15_NotificarLiberacaoAvaliacao
-start
-:Sistema detecta o registro de nova avaliação física vinculada ao aluno (UC14);
-:Sistema verifica o canal de notificação do aluno;
-:Sistema gera a mensagem de notificação com a data da avaliação;
-:Sistema envia a notificação ao aluno;
-if (Envio bem-sucedido?) then (Não)
-  :Sistema registra a falha e agenda nova tentativa de envio;
-else (Sim)
-  :Sistema registra o envio no histórico de notificações do aluno;
-endif
-stop
-@enduml
-```
+<img width="687" height="397" alt="image" src="https://github.com/user-attachments/assets/3aec042b-113b-499e-a4b3-402895f22c4d" />
 
 ---
 
 ### DA16 – Consultar Avaliação Física (UC16)
 
-```plantuml
-@startuml DA16_ConsultarAvaliacaoFisica
-start
-:Aluno acessa o módulo de avaliações físicas;
-:Sistema exibe a lista de avaliações registradas em ordem cronológica;
-if (Existe avaliação registrada?) then (Não)
-  :Sistema informa que não há avaliações físicas disponíveis para o aluno;
-  stop
-else (Sim)
-  :Aluno seleciona a avaliação desejada;
-  :Sistema exibe os detalhes completos da avaliação selecionada;
-  if (Possui arquivos anexados?) then (Sim)
-    :Aluno pode visualizar os arquivos anexados;
-  endif
-  stop
-endif
-@enduml
-```
+<img width="687" height="403" alt="image" src="https://github.com/user-attachments/assets/16c8ead4-3aa9-485d-a07b-cf7e2659a8b9" />
 
 ---
 
 ### DA17 – Emitir Relatório Gerencial (UC17)
 
-```plantuml
-@startuml DA17_EmitirRelatorioGerencial
-start
-:Gerente acessa o módulo de relatórios;
-:Sistema exibe os tipos de relatórios disponíveis;
-:Gerente seleciona o tipo de relatório e o período desejado;
-:Sistema processa e gera o relatório solicitado;
-if (Dados encontrados?) then (Não)
-  :Sistema informa que não há registros para os filtros aplicados;
-  stop
-else (Sim)
-  :Gerente visualiza o relatório;
-  :Gerente pode exportar o relatório;
-  stop
-endif
-@enduml
-```
+<img width="605" height="447" alt="image" src="https://github.com/user-attachments/assets/f718aa7c-05ac-4ad6-a33c-67d665bebe8f" />
 
 ---
 
 ### DA18 – Emitir Relatório de Ocupação de Aulas (UC18)
 
-```plantuml
-@startuml DA18_RelatorioOcupacaoAulas
-start
-:Gerente acessa o módulo de relatórios;
-:Gerente seleciona o tipo "Ocupação de Aulas";
-:Gerente define o período de análise desejado;
-:Sistema processa os dados de agendamento e presença das aulas no período;
-:Sistema gera o relatório com percentual de ocupação por aula;
-if (Dados encontrados?) then (Não)
-  :Sistema informa que não há registros para os filtros aplicados;
-  stop
-else (Sim)
-  :Gerente visualiza o relatório e pode exportá-lo;
-  stop
-endif
-@enduml
-```
+<img width="675" height="447" alt="image" src="https://github.com/user-attachments/assets/7f55c68b-45be-44bd-9c29-2076c0eccfa3" />
 
 ---
 
 ### DA19 – Consultar Histórico de Acessos (UC19)
 
-```plantuml
-@startuml DA19_ConsultarHistoricoAcessos
-start
-:Gerente acessa o módulo de relatórios;
-:Gerente seleciona o tipo "Histórico de Acessos";
-:Gerente define o período e, opcionalmente, filtra por aluno;
-:Sistema consulta os registros de entrada no período informado;
-if (Registros encontrados?) then (Não)
-  :Sistema informa que não há acessos para os filtros aplicados;
-  stop
-else (Sim)
-  :Sistema exibe a listagem de acessos com data, horário e nome do aluno;
-  :Gerente pode exportar o relatório;
-  stop
-endif
-@enduml
-```
+<img width="687" height="372" alt="image" src="https://github.com/user-attachments/assets/7cc1a7af-147d-4af7-adf5-de33421f9f84" />
 
 ---
 
 ### DA20 – Realizar Logout (UC20)
 
-```plantuml
-@startuml DA20_RealizarLogout
-start
-:Usuário acessa a opção de logout no sistema;
-:Sistema solicita confirmação do encerramento da sessão;
-:Usuário confirma;
-:Sistema invalida o token de sessão do usuário;
-:Sistema redireciona para a tela de login;
-stop
-
-note right
-  FA1: Sessão expirada por inatividade —
-  Sistema encerra automaticamente e
-  redireciona com aviso de expiração,
-  sem necessidade de confirmação do usuário.
-end note
-@enduml
-```
+<img width="506" height="402" alt="image" src="https://github.com/user-attachments/assets/e61fd3e8-3a05-4b08-96c1-989f186f471e" />
 
 ---
 
@@ -1089,34 +729,7 @@ end note
 
 > Diagrama agrupado representando o ciclo completo de um aluno desde o login até a validação de acesso físico.
 
-```plantuml
-@startuml DA_GRP01_AcessoValidacao
-start
-:Usuário acessa a tela de login e informa credenciais (UC03);
-if (Autenticação válida?) then (Não)
-  :Sistema bloqueia acesso;
-  stop
-else (Sim)
-  :Sistema identifica perfil e inicia sessão;
-  if (Perfil = Aluno?) then (Sim)
-    :Aluno se dirige à catraca e aproxima cartão RFID (UC09);
-    :Sistema consulta regularidade do aluno (UC05);
-    if (Mensalidade vencida há mais de 5 dias?) then (Sim)
-      :Sistema nega acesso (RN01);
-      :Catraca permanece bloqueada;
-      stop
-    else (Não)
-      :Sistema autoriza acesso;
-      :Catraca libera entrada e sistema registra acesso;
-      stop
-    endif
-  else (Não)
-    :Usuário acessa painel do seu perfil;
-    stop
-  endif
-endif
-@enduml
-```
+<img width="687" height="369" alt="image" src="https://github.com/user-attachments/assets/10966ee6-58c4-47d6-a501-5aefb00cecd7" />
 
 ---
 
@@ -1124,23 +737,7 @@ endif
 
 > Diagrama agrupado representando o ciclo financeiro: notificação, cobrança, pagamento e atualização de regularidade.
 
-```plantuml
-@startuml DA_GRP02_FluxoFinanceiro
-start
-:Sistema verifica vencimentos diariamente e envia notificação ao aluno (UC08);
-fork
-  :Aluno opta por pagar presencialmente;
-  :Recepcionista busca aluno e registra pagamento integral (UC06);
-fork again
-  :Sistema gera cobrança online e envia ao aluno (UC07);
-  :Aluno realiza pagamento pelo canal online;
-end fork
-:Sistema atualiza situação do aluno para "regular" (RN07);
-:Sistema verifica regularidade atualizada (UC05);
-:Aluno liberado para acesso à academia;
-stop
-@enduml
-```
+<img width="687" height="413" alt="image" src="https://github.com/user-attachments/assets/8bb2382f-ce10-4edd-a3f4-1984c60f5136" />
 
 ---
 
@@ -1148,28 +745,6 @@ stop
 
 > Diagrama agrupado representando o ciclo completo de uma aula: agendamento, confirmação, possível cancelamento e registro de presença.
 
-```plantuml
-@startuml DA_GRP03_FluxoAgendamentoAula
-start
-:Aluno acessa módulo de agendamento e seleciona aula (UC10);
-if (Aluno inadimplente ou sem vagas?) then (Sim)
-  :Sistema bloqueia agendamento;
-  stop
-else (Não)
-  :Sistema registra reserva;
-  :Sistema envia notificação de confirmação ao aluno (UC11);
-  if (Aluno cancela com pelo menos 1h de antecedência?) then (Sim)
-    :Sistema cancela agendamento e libera vaga (UC12);
-    stop
-  else (Não)
-    :Aula ocorre no horário agendado;
-    :Instrutor seleciona aula, marca presenças e sistema salva registro (UC13);
-    stop
-  endif
-endif
-@enduml
-```
+<img width="687" height="291" alt="image" src="https://github.com/user-attachments/assets/12f9664f-195d-4510-8eab-6eb2303451b6" />
 
 ---
-
-*Documento gerado para fins acadêmicos – Disciplina de Engenharia de Software – UNIFEOB*
