@@ -33,7 +33,7 @@ Permitir que o usuário acesse o sistema.
 ### RN Relacionadas
 - RN06 (Acesso restrito por perfil)
 
---
+  <img width="682" height="420" alt="image" src="https://github.com/user-attachments/assets/9d53fdf4-6205-432b-ba92-c134d3b007b4" />
 
 # UC02 — Realizar Matrícula de Aluno
 
@@ -70,7 +70,7 @@ Registrar um novo aluno no sistema.
 ### RN Relacionadas
 - RN06 (Perfil Recepcionista)
 
---
+<img width="764" height="520" alt="image" src="https://github.com/user-attachments/assets/1055f8c4-ea91-4d16-994e-2f1c4443dcd9" />
 
 # UC03 — Registrar Pagamento de Mensalidade
 
@@ -107,7 +107,7 @@ Registrar o pagamento integral da mensalidade do aluno.
 ### RN Relacionadas
 - RN04, RN07
 
---
+<img width="697" height="541" alt="image" src="https://github.com/user-attachments/assets/8a903281-c178-4c0a-bca4-920a26fd1265" />
 
 # UC04 — Realizar Avaliação Física
 
@@ -144,7 +144,7 @@ Registrar dados antropométricos e de saúde do aluno.
 ### RN Relacionadas
 - RN05, RN06
 
---
+<img width="675" height="634" alt="image" src="https://github.com/user-attachments/assets/f9888dc5-dd8b-4c0b-96c3-fc92afed5e4c" />
 
 # UC05 — Validar Acesso na Catraca (RFID)
 
@@ -181,7 +181,7 @@ Validar a entrada do aluno via integração com hardware.
 ### RN Relacionadas
 - RN01
 
---
+<img width="664" height="535" alt="image" src="https://github.com/user-attachments/assets/f4907e0c-b172-4d99-b32d-119763ef5359" />
 
 # UC06 — Agendar Aula Coletiva
 
@@ -218,7 +218,7 @@ Reservar vaga em uma aula disponível na grade.
 ### RN Relacionadas
 - RN02
 
---
+<img width="786" height="658" alt="image" src="https://github.com/user-attachments/assets/bd41de94-6d13-4e8d-ab49-8d71cd64c7be" />
 
 # UC07 — Cancelar Agendamento de Aula
 
@@ -255,7 +255,7 @@ Desistir de um agendamento realizado previamente.
 ### RN Relacionadas
 - RN03
 
---
+<img width="739" height="541" alt="image" src="https://github.com/user-attachments/assets/26328878-c6c5-4316-b2cc-b2ee58c4cb16" />
 
 # UC08 — Registrar Presença em Aula
 
@@ -292,7 +292,7 @@ Confirmar o comparecimento dos alunos agendados.
 ### RN Relacionadas
 - RN06
 
---
+<img width="668" height="800" alt="image" src="https://github.com/user-attachments/assets/efd81232-c042-4e48-a8cc-8086ab4b0e5b" />
 
 # UC09 — Gerar Relatório de Inadimplência
 
@@ -329,7 +329,7 @@ Listar alunos com mensalidades vencidas há mais de 5 dias.
 ### RN Relacionadas
 - RN01, RN06
 
---
+<img width="650" height="634" alt="image" src="https://github.com/user-attachments/assets/ab6a06c4-1157-4dad-a04a-d324eb23a99a" />
 
 # UC10 — Gerenciar Tipos de Planos
 
@@ -368,7 +368,7 @@ Criar, editar ou desativar categorias de planos de serviço.
 ### RN Relacionadas
 - RN06
 
---
+<img width="786" height="520" alt="image" src="https://github.com/user-attachments/assets/919ef565-3334-4097-b106-0e4ae63b3777" />
 
 UC11 — Notificar Vencimento de Mensalidade
 
@@ -405,7 +405,7 @@ Alertar o aluno sobre o prazo de pagamento via notificação push ou e-mail.
 ### RN Relacionadas
 - RN01
 
---
+<img width="737" height="783" alt="image" src="https://github.com/user-attachments/assets/bb0aac55-47b9-41de-a058-84d903ce3035" />
 
 UC12 — Gerar Relatório de Alunos Ativos
 
@@ -442,8 +442,7 @@ Visualizar a listagem consolidada de alunos com situação regular.
 ### RN Relacionadas
 - RN02, RN06
 
---
-
+<img width="786" height="499" alt="image" src="https://github.com/user-attachments/assets/09dff4f6-c960-4845-95f9-502d616d3a49" />
 
 UC13 — Consultar Ocupação de Aula
 
@@ -480,7 +479,7 @@ Visualizar a listagem consolidada de alunos com situação regular.
 ### RN Relacionadas
 - RN02, RN06
 
---
+<img width="697" height="541" alt="image" src="https://github.com/user-attachments/assets/884792a7-9d77-419c-9b0a-685ea06158d8" />
 
 UC14 — Configurar Limite de Vagas
 
@@ -517,7 +516,7 @@ Definir a capacidade máxima de alunos por modalidade ou sala.
 ### RN Relacionadas
 - RN02, RN06
 
-- -
+<img width="567" height="541" alt="image" src="https://github.com/user-attachments/assets/372812b0-4ab5-437a-872a-47ff6eef2a0d" />
 
 UC15 — Sincronizar Acesso API Catraca
 
@@ -554,7 +553,7 @@ Garantir a comunicação entre o hardware da catraca e o software central.
 ### RN Relacionadas
 - RN01
 
---
+<img width="786" height="636" alt="image" src="https://github.com/user-attachments/assets/96b33e94-0197-404d-8839-e669947f9137" />
 
 UC16 — Recuperar Senha de Usuário
 
@@ -592,7 +591,7 @@ Permitir a redefinição de credenciais de acesso esquecidas.
 ### RN Relacionadas
 - RN06
 
---
+<img width="768" height="740" alt="image" src="https://github.com/user-attachments/assets/e6e7de66-f5a1-4459-b2b3-825d3c4f63da" />
 
 UC17 — Consultar Grade de Horários
 
@@ -629,7 +628,7 @@ Visualizar a grade de aulas disponíveis através do dispositivo móvel.
 ### RN Relacionadas
 - RN02
 
---
+<img width="786" height="503" alt="image" src="https://github.com/user-attachments/assets/af5c5fda-88ab-4142-9629-f42907365aed" />
 
 UC18 — Enviar Confirmação de Reserva
 
@@ -665,6 +664,11 @@ Confirmar o sucesso do agendamento de uma vaga para o aluno.
 
 ### RN Relacionadas
 - RN02
+
+<img width="684" height="723" alt="image" src="https://github.com/user-attachments/assets/4590e0a8-1c8a-4e32-bdcd-f00fe2fdc348" />
+
+
+
 
 
 
