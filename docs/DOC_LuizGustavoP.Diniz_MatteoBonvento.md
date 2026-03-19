@@ -48,6 +48,8 @@ Permitir que um novo aluno seja matriculado no sistema FitPass com todos os dado
 
 - RN06 — Acesso restrito por perfil (Recepcionista realiza matrículas)
 
+<img width="512" height="235" alt="image" src="https://github.com/user-attachments/assets/42b7c0f2-de13-423e-81ef-f10283ea469e" />
+
 ---
 
 ## UC02 — Escolher Plano
@@ -96,6 +98,8 @@ Permitir que o aluno visualize e selecione um plano disponível durante ou após
 ### RN Relacionadas
 
 - RN06 — Acesso restrito por perfil
+
+  <img width="512" height="440" alt="image" src="https://github.com/user-attachments/assets/91afa95b-be39-4088-bb28-73f4488be25e" />
 
 ---
 
@@ -150,6 +154,8 @@ Registrar o pagamento da mensalidade do aluno e atualizar sua situação de regu
 - RN04 — Pagamento parcial não permitido
 - RN07 — Atualização automática da regularidade
 
+<img width="512" height="301" alt="image" src="https://github.com/user-attachments/assets/0054b954-de10-4fe1-8d46-1c3c647c0acf" />
+
 ---
 
 ## UC04 — Realizar Cadastro Facial na Catraca
@@ -202,6 +208,8 @@ Registrar o dado biométrico facial do aluno para liberação de acesso via catr
 
 - RN01 — Bloqueio por inadimplência
 - RN06 — Acesso restrito por perfil
+
+<img width="1199" height="562" alt="image" src="https://github.com/user-attachments/assets/e47a5013-2689-40bb-ab00-c2e12dd76d70" />
 
 ---
 
@@ -257,6 +265,8 @@ Permitir que o aluno visualize horários disponíveis e reserve vaga em uma aula
 - RN03 — Cancelamento de agendamento
 - RN01 — Bloqueio por inadimplência
 
+  <img width="512" height="236" alt="image" src="https://github.com/user-attachments/assets/97f7ba2d-299c-4025-9039-5e28be8c48b5" />
+
 ---
 
 ## UC06 — Registrar Presença em Aulas
@@ -307,6 +317,8 @@ Registrar a presença dos alunos que compareceram a uma aula específica.
 ### RN Relacionadas
 
 - RN06 — Acesso restrito por perfil (Instrutor registra presenças)
+
+<img width="557" height="617" alt="image" src="https://github.com/user-attachments/assets/f8832ddf-b5a4-477e-aa82-0e4f3a198e16" />
 
 ---
 
@@ -361,6 +373,8 @@ Registrar a avaliação física do aluno com dados biométricos e de composiçã
 - RN05 — Avaliação física somente para alunos ativos e regulares
 - RN06 — Acesso restrito por perfil (Instrutor executa avaliações)
 
+<img width="1035" height="484" alt="image" src="https://github.com/user-attachments/assets/4b020822-ba0a-45ba-be03-de3d2b601e7f" />
+
 ---
 
 ## UC08 — Gerenciar Matrículas
@@ -412,6 +426,8 @@ Permitir que a recepcionista consulte, edite, ative ou cancele matrículas de al
 
 - RN06 — Acesso restrito por perfil (Recepcionista gerencia matrículas)
 
+<img width="795" height="659" alt="image" src="https://github.com/user-attachments/assets/30de5e01-cdd7-42c5-b467-cd2bf059f362" />
+
 ---
 
 ## UC09 — Indicar Planos
@@ -460,6 +476,8 @@ Apresentar ao aluno ou visitante as opções de planos disponíveis, auxiliando 
 ### RN Relacionadas
 
 - RN06 — Acesso restrito por perfil
+
+<img width="894" height="537" alt="image" src="https://github.com/user-attachments/assets/f694976a-a147-4726-82da-ae790d66bc6b" />
 
 ---
 
@@ -512,6 +530,8 @@ Registrar, consultar e gerenciar pagamentos de mensalidades realizados pelos alu
 - RN04 — Pagamento parcial não permitido
 - RN07 — Atualização automática da regularidade
 - RN06 — Acesso restrito por perfil
+
+<img width="512" height="256" alt="image" src="https://github.com/user-attachments/assets/c6a64890-807a-4f8a-82ee-7b4573a0389f" />
 
 ---
 
@@ -566,6 +586,8 @@ Criar, editar e controlar os horários das aulas e os agendamentos realizados pe
 - RN03 — Cancelamento de agendamento
 - RN06 — Acesso restrito por perfil
 
+<img width="512" height="364" alt="image" src="https://github.com/user-attachments/assets/fe2933cd-e6a3-487d-a7f7-3d38f061e28d" />
+
 ---
 
 ## UC12 — Fornecer Horários Disponíveis para as Aulas
@@ -613,6 +635,8 @@ Permitir que o instrutor informe sua disponibilidade de horários para ministrar
 ### RN Relacionadas
 
 - RN06 — Acesso restrito por perfil (Instrutor fornece horários)
+
+<img width="512" height="430" alt="image" src="https://github.com/user-attachments/assets/4e2161c4-5b6f-4095-862d-c51d99aea26a" />
 
 ---
 
@@ -667,6 +691,8 @@ Realizar e registrar a avaliação física completa do aluno, com possibilidade 
 - RN05 — Avaliação física somente para alunos ativos e regulares
 - RN06 — Acesso restrito por perfil
 
+<img width="512" height="247" alt="image" src="https://github.com/user-attachments/assets/efaef752-be02-4789-8522-e15628ce0c60" />
+
 ---
 
 ## UC14 — Cadastrar Facial na Catraca para Acesso do Instrutor
@@ -717,6 +743,8 @@ Registrar os dados biométricos faciais do instrutor no sistema de catraca para 
 
 - RN06 — Acesso restrito por perfil
 
+<img width="512" height="247" alt="image" src="https://github.com/user-attachments/assets/c7a0965a-66ce-431b-a1dd-9cb95a6ddf57" />
+
 ---
 
 ## UC15 — Gerenciar Planos
@@ -766,6 +794,8 @@ Criar, editar, ativar e desativar planos oferecidos pela academia.
 ### RN Relacionadas
 
 - RN06 — Acesso restrito por perfil (Gerente configura planos)
+
+<img width="512" height="374" alt="image" src="https://github.com/user-attachments/assets/05e3f3b6-2967-4ab4-a8d3-2e08cd0fc3b3" />
 
 ---
 
@@ -819,6 +849,8 @@ Emitir e analisar relatórios sobre inadimplência, alunos ativos, histórico de
 
 - RN06 — Acesso restrito por perfil (Gerente acessa relatórios)
 
+<img width="512" height="225" alt="image" src="https://github.com/user-attachments/assets/5ef997ee-5ffb-4210-8aad-745e8791bcbb" />
+
 ---
 
 ## UC17 — Gerir Pagamentos de Funcionários
@@ -869,6 +901,8 @@ Registrar e acompanhar os pagamentos de salários e comissões dos funcionários
 
 - RN06 — Acesso restrito por perfil (Gerente gere pagamentos de funcionários)
 
+<img width="512" height="414" alt="image" src="https://github.com/user-attachments/assets/8bb63106-64cf-40c3-b1ba-50371adba46a" />
+
 ---
 
 ## UC18 — Analisar Presença de Alunos
@@ -917,6 +951,8 @@ Visualizar e analisar a frequência dos alunos nas aulas e no uso geral da acade
 ### RN Relacionadas
 
 - RN06 — Acesso restrito por perfil (Gerente analisa dados)
+
+<img width="512" height="281" alt="image" src="https://github.com/user-attachments/assets/e93f9547-fa1a-4fdc-aa2b-3896e094636f" />
 
 ---
 
@@ -968,6 +1004,8 @@ Garantir que o sistema de catraca possua os dados atualizados de todos os alunos
 
 - RN01 — Bloqueio por inadimplência
 - RN07 — Atualização automática da regularidade
+
+<img width="512" height="216" alt="image" src="https://github.com/user-attachments/assets/fde5c989-abab-4bb9-a003-e586eecbd7e1" />
 
 ---
 
@@ -1021,3 +1059,5 @@ Impedir automaticamente o acesso à academia de alunos com mensalidade em atraso
 
 - RN01 — Bloqueio por inadimplência (vencida há mais de 5 dias)
 - RN07 — Atualização automática da regularidade
+
+<img width="512" height="444" alt="image" src="https://github.com/user-attachments/assets/ce4abcad-e2fe-4c85-9e4f-80099ceb4968" />
